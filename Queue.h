@@ -1,13 +1,14 @@
 #pragma once
 
-class node {				//a node class
+struct node {				//a node class
 public:
 	double data;
 	node* nextPtr;
 	node();
 };
 
-class queue {				//a queue class
+struct queue {				//a queue class
+private:
 	node* headPtr;
 	node* rearPtr;
 public:
