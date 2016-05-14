@@ -1,5 +1,5 @@
 #include"Queue.h"
-#include<iostream>
+//#include<iostream>
 
 node::node() {						//ctor of node class
 	this->data = 0;
@@ -39,7 +39,8 @@ void queue::enqueue(double insertThis) {		//adds the element after the recently 
 
 void queue::dequeue() {							//deletes the first element in the queue
 	if (headPtr == NULL&&rearPtr == NULL) {
-		std::cout << "Queue already empty" << std::endl;
+		//std::cout << "Queue already empty" << std::endl;
+		printf("Queue already empty");
 	} else if (headPtr == rearPtr) {
 		delete headPtr;
 		headPtr = NULL;
@@ -63,8 +64,11 @@ void queue::display() {							//displays the whole queue element by element
 	node* currentPtr = this->headPtr;
 
 	while (currentPtr != NULL) {
-		std::cout << currentPtr->data << std::endl;
+		
+		//std::cout << currentPtr->data << std::endl;
+		printf("%d \n",currentPtr->data);
 		currentPtr = currentPtr->nextPtr;
 	}
-	std::cout << std::endl;
+	//std::cout << std::endl;
+	printf("\n");
 }
