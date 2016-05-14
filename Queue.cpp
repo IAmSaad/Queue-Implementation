@@ -40,7 +40,7 @@ void queue::enqueue(double insertThis) {		//adds the element after the recently 
 void queue::dequeue() {							//deletes the first element in the queue
 	if (headPtr == NULL&&rearPtr == NULL) {
 		//std::cout << "Queue already empty" << std::endl;
-		printf("Queue already empty");
+		printf("Queue already empty\n");
 	} else if (headPtr == rearPtr) {
 		delete headPtr;
 		headPtr = NULL;
